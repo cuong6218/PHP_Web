@@ -1,23 +1,18 @@
 <?php
     function checkPrime($number){
-        $flag = true;
         if ($number < 2){
-            $flag = false;
-            return $flag;
+            return false;
         }
         if ($number == 2){
-            $flag = true;
-            return $flag;
+            return true;
         }
         for ($i = 2; $i < $number; $i++){
             if ($number % $i ==0){
-                $flag = false;
-                return $flag;
+                return false;
             }
-        } return $flag;
+        } return true;
     }
     function printPrime($n){
-        // $count = 0;
         $i = 1;
         while ($i < $n){
             if (checkPrime($i)){
